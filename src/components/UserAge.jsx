@@ -1,19 +1,19 @@
-import React from 'react'
-import { Wrapper, Form, Username, UsernameInput, Age, AgeInput, AddUser } from './UserAge.styled'
+import React from "react";
+import UserData from "./UserData";
 
 const UserAge = () => {
   return (
-      <Wrapper>
-          <Form>
-                <Username htmlFor='user'>Username</Username>
-                <UsernameInput id='user' />
-                <Age htmlFor='age'>Age</Age>
-                <AgeInput id='age'/>
-                <AddUser>Add User</AddUser>
-          </Form>
-      </Wrapper>
-    
-  )
-}
+    <div>
+      {UserData.map((data) => {
+        return (
+          <div key={data.id}>
+            <p>{data.user}</p>
+            <p>{data.age}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
-export default UserAge
+export default UserAge;
