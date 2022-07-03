@@ -14,11 +14,13 @@ function App() {
   }
 
   function handleDelete(id) {
-    setUsername(
-      username.filter((user) => {
-        return user.id !== id;
-      })
-    );
+    if (window.confirm("Are you sure, you want to delete?")) {
+      setUsername(
+        username.filter((user) => {
+          return user.id !== id;
+        })
+      );
+    }
   }
 
   return (

@@ -25,8 +25,8 @@ const AddUser = ({ addUserAge }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className='form'>
+      <form onSubmit={handleSubmit} >
         <label htmlFor="user">Enter User</label>
         <input
           type="text"
@@ -43,7 +43,7 @@ const AddUser = ({ addUserAge }) => {
           onChange={handleInputAge}
           value={age}
         />
-        <button type="submit">Add User</button>
+        <button type="submit" className="adduser">Add User</button>
       </form>
     </div>
   );
