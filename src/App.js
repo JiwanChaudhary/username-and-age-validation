@@ -13,10 +13,18 @@ function App() {
     setUsername([...username, user]);
   }
 
+  function handleDelete(id) {
+    setUsername(
+      username.filter((user) => {
+        return user.id !== id;
+      })
+    );
+  }
+
   return (
     <>
       <AddUser addUserAge={handleUserAge} />
-      <UserAgeList userAgeL={username} />
+      <UserAgeList userAgeL={username} deleteUser={handleDelete} />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserAgeList = ({ userAgeL }) => {
+const UserAgeList = ({ userAgeL, deleteUser }) => {
   return (
     <div>
       {userAgeL.map((user) => {
@@ -8,6 +8,7 @@ const UserAgeList = ({ userAgeL }) => {
           <div key={user.id}>
             <p>Hello, this is {user.user}</p>
             <p>My age is: {user.age}</p>
+            <button onClick={() => deleteUser(user.id)}>Delete</button>
           </div>
         );
       })}
