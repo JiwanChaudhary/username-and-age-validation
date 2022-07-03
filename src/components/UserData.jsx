@@ -2,17 +2,17 @@ import { v4 as uuidv4 } from "uuid";
 const UserData = [
   {
     id: uuidv4(),
-    user: "Hello, This is Jiwan",
+    user: "Jiwan",
     age: 20,
   },
   {
     id: uuidv4(),
-    user: "Hello, This is Pukar",
+    user: "Pukar",
     age: 65,
   },
   {
     id: uuidv4(),
-    user: "Hello, This is Seavam",
+    user: "Seavam",
     age: 10,
   },
 ];

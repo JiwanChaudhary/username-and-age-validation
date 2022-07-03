@@ -6,8 +6,8 @@ const UserAgeList = ({ userAgeL }) => {
       {userAgeL.map((user) => {
         return (
           <div key={user.id}>
-            <p>{user.user}</p>
-            <p>{user.age}</p>
+            <p>Hello, this is {user.user}</p>
+            <p>My age is: {user.age}</p>
           </div>
         );
       })}
