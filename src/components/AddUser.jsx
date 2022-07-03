@@ -5,15 +5,23 @@ const AddUser = ({ addUserAge }) => {
   const [user, setUser] = useState("");
   const [age, setAge] = useState("");
 
-  const handleInputChange = (e) => {
+  const handleInputUser = (e) => {
     setUser(e.target.value);
-    setAge(e.target.value);
+    console.log(e.target.value);
   };
+
+  const handleInputAge = (e) => {
+    setAge(e.target.value);
+    console.log(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     addUserAge({ user, age });
     setUser("");
     setAge("");
+    console.log(user);
+    console.log(age);
   };
 
   return (
@@ -24,7 +32,7 @@ const AddUser = ({ addUserAge }) => {
           type="text"
           id="user"
           placeholder="Write name"
-          onChange={handleInputChange}
+          onChange={handleInputUser}
           value={user}
         />
         <label htmlFor="age">Enter Age</label>
@@ -32,7 +40,7 @@ const AddUser = ({ addUserAge }) => {
           type="number"
           id="age"
           placeholder="Write age"
-          onChange={handleInputChange}
+          onChange={handleInputAge}
           value={age}
         />
         <button type="submit">Add User</button>
